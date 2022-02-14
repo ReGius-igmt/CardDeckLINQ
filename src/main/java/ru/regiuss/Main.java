@@ -23,28 +23,28 @@ public class Main {
 
     static List<String> suits(){
         return List.of(
-                "clubs",
-                "diamonds",
-                "hearts",
-                "spades"
+                "крести",
+                "бубны",
+                "черви",
+                "пики"
         );
     }
 
     static List<String> ranks(){
         return List.of(
-                "two",
-                "three",
-                "four",
-                "five",
-                "six",
-                "seven",
-                "eight",
-                "nine",
-                "ten",
-                "jack",
-                "queen",
-                "king",
-                "ace"
+                "два",
+                "три",
+                "четыре",
+                "пять",
+                "шесть",
+                "семь",
+                "восемь",
+                "девять",
+                "десять",
+                "валет",
+                "дама",
+                "король",
+                "туз"
         );
     }
 }

@@ -4,13 +4,21 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(
-                suits().stream()
-                        .flatMap(
-                                s -> ranks().stream()
-                                        .map(s1 -> new Card(s, s1))
-                        ).toList()
-        );
+        var cards = suits().stream()
+                .flatMap(
+                        s -> ranks().stream()
+                                .map(s1 -> new Card(s, s1))
+                ).toList();
+        System.out.println(cards);
+
+        var top = cards.stream().limit(26).toList();
+        var bottom = cards.stream().skip(26).toList();
+
+        var shuffle = Extensions.shuffle(top, bottom);
+
+        System.out.println(shuffle);
+
+
     }
 
     static List<String> suits(){
